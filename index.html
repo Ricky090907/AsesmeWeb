@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesmen</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="border border-success p-2 mb-2 bg-primary text-bg-primary"
+        style="font-family: 'Heebo' , sans-serif; font-size: 23px;">Starbhak Mart</div>
+    <div class="container-fluid" style="margin-top: -4px;">
+        <div class="row bg-body-tertiary">
+            <div id="content" class="col-3 bg-body-tertiary" style="margin-left: 10px;">
+                <div class="row ">
+
+                    <select class="bg-info"
+                        style="width: 95%; height: 44px; margin-left: 10px; margin-top: 3px; font-family: 'Heebo' , sans-serif; color: white;">
+                        <option value="1" style="text-align: center; ">Take Away</option>
+                        <option value="2" style="text-align: center; ">Delivery</option>
+                    </select>
+
+
+                </div>
+                <div class="row">
+                    <div class="border border-secondary bg-info" style="width: 95%; height: 37px; text-align: center; margin-left: 10px;
+                        margin-top: 10px; font-family: 'Heebo' , sans-serif;  font-size: 19px;">
+
+                        <h5 style="margin-top: 5px; color: white;"> <i class='bx bx-cool'
+                                style="color: black;"></i>Shop</h5>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Border -->
+                    <div class="border border-secondary " style="margin-top: 8px; height: 25pc; overflow-y: scroll;">
+                        <div class="tampilan col-lg-12">
+                                
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="border border-white bg-white" style="margin-top: 8px; height: 6pc;">
+                        <div class="col-12">
+                            <div class="garis" >
+                                <h6 style="display: flex;">Discount: </h6>
+                            </div>
+                            <div class="row col-12">
+                                <div class="garis" style="justify-content: space-between;">
+                                    <h6>tax:</h6>
+                                    <h6 style="margin-right: 2pc;" id="pajak">Rp. 0</h6>
+                                </div>
+
+                            </div>
+                            <div class="row col-12" >
+                                <div class=" garis bg-primary" style="justify-content: space-between;" >
+                                    <h6>Total Amount: </h6>
+                                    <h6  id="total" style="margin-right: 2pc;">Rp. 0</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col" style="width: 100pc; margin-top: 3px">
+                <nav class="navbar bg-secondary-subtle">
+                    <h6 style="height: 10px; margin-left: 10px; font-family: 'Heebo' , sans-serif;">item list</h6>
+                       <ul class="list-group" id="result"></ul>
+                    <div class="box">
+                        <i class='bx bx-search bx-sm'></i>
+                        <i class='bx bx-menu bx-sm'></i>
+                        <i class='bx bx-sort-alt-2 bx-sm'></i>
+                    </div>
+
+                </nav>
+
+                <section>
+
+                    <div class="border border-success" style="height: 70vh;  margin-top: 10px; overflow-y: scroll;">
+                        <div class="row col-sm-12 col-md-10 col-lg-9" >
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Ayam bakar', 1, 10000 )">
+                                    <div class="in-cards">
+                                        <img src="asset/ayambakar.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>ayam bakar</p>
+                                        <h1>Rp. 10.000.</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Ayam Goreng', 1, 10000 )">
+                                    <div class="in-cards">
+                                        <img src="asset/ayamgoreng.jpg" class="card-img-top" style="height: 95px;">
+                                        <p>Ayam Goreng</p>
+                                        <h1>Rp. 10.000</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Dendeng', 1, 10000)">
+                                    <div class="in-cards">
+                                        <img src="asset/dendeng.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Dendeng</p>
+                                        <h1>Rp. 10.000.</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Gulai', 1, 10000)">
+                                    <div class="in-cards">
+                                        <img src="asset/gulai.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Gulai</p>
+                                        <h1>Rp. 10.000.</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Tongkol Asam Padeh', 1, 9000)">
+                                    <div class="in-cards">
+                                        <img src="asset/ikantongkol.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Tongkol Asam Padeh</p>
+                                        <h1>Rp. 9.000.</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('kikil', 1, 10000)">
+                                    <div class="in-cards">
+                                        <img src="asset/kikil.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>kikil</p>
+                                        <h1>Rp. 10.000.</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Nasi', 1, 5000)">
+                                    <div class="in-cards">
+                                        <img src="asset/nasi.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Nasi</p>
+                                        <h1>Rp. 5.000.</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Perkedel', 1, 5000)">
+                                    <div class="in-cards" >
+                                        <img src="asset/perkedel.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Perkedel</p>
+                                        <h1>Rp. 5.000</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Rendang', 1, 11000)">
+                                    <div class="in-cards">
+                                        <img src="asset/rendang.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Rendang</p>
+                                        <h1>Rp. 11.000</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Telur Dadar', 1, 7000)">
+                                    <div class="in-cards">
+                                        <img src="asset/telur.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Telur Dadar</p>
+                                        <h1>Rp. 7.000</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Jus Alpukat', 1, 7000)">
+                                    <div class="in-cards">
+                                        <img src="asset/Alpukat.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Jus Alpukat</p>
+                                        <h1>Rp. 7.000</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Es Buah', 1, 8000)">
+                                    <div class="in-cards">
+                                        <img src="asset/esbuah.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Es Buah</p>
+                                        <h1>Rp. 8.000</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Es Jeruk', 1, 6000)">
+                                    <div class="in-cards">
+                                        <img src="asset/esjeruk.jgp.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Es Jeruk</p>
+                                        <h1>Rp. 6.000.</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Es Teh Manis', 1, 6000)">
+                                    <div class="in-cards">
+                                        <img src="asset/esteh.jpg"  class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Es Teh Manis</p>
+                                        <h1>Rp. 6.000</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Es Kopyor', 1, 8000)">
+                                    <div class="in-cards">
+                                        <img src="asset/kopyor.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Es Kopyor</p>
+                                        <h1>Rp. 8.000</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards" onclick="tambahpesanan('Teh Botol', 1, 5000)">
+                                    <div class="in-cards">
+                                        <img src="asset/tehbotol.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Teh Botol</p>
+                                        <h1>Rp. 5.000</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards"  onclick="tambahpesanan('Teh Hangat', 1, 5000)">
+                                    <div class="in-cards">
+                                        <img src="asset/teh.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Teh Hangat</p>
+                                        <h1>Rp. 5.000</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 8pc;">
+                                <div class="cards"  onclick="tambahpesanan('Jeruk Hangat', 1, 5000)">
+                                    <div class="in-cards">
+                                        <img src="asset/jeruk.jpg" class="card-img-top"
+                                            style="height: 95px;">
+                                        <p>Jeruk Hangat</p>
+                                        <h1>Rp. 5.000</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="tombol-submit" style="text-align: right;  margin-top: 10px;">
+            <button onclick="print()" class="btn btn-primary" style="width: 15pc;">
+                <p>Payment</p>
+
+                <p><i class='bx bx-printer'></i>(CTRL + P)</p>
+            </button>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="border border-success bg-primary text-bg-primary"
+        style=" font-size: 16px; position: fixed; bottom: 0 ; left: 0;">Ready</div>
+        </footer>
+    </div>
+
+
+</body>
+
+<!-- javascript -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  
+  function print() {
+      var contentDiv = document.getElementById('content');
+      var contentToPrint = contentDiv.innerHTML;
+      var newWindow = window.open('', '_blank');
+      newWindow.document.open();
+      newWindow.document.write(  contentToPrint  );
+      newWindow.document.close();
+      newWindow.print();
+    }
+    var cart = [];
+    function tambahpesanan(name, count, price) {
+        //mendapatkan array saat ini
+        var existingItem = cart.find(element => element.name === name);
+        //memeriksa array sudah ada atau belum
+        if (!existingItem) {
+            cart.push({ name: name, count: count, price: price });
+        } else {
+            existingItem.count++;
+        }
+        showCartList();
+    }
+
+
+    function showCartList() {
+        $(".tampilan").empty();
+        totalHarga = 0 ;
+        cart.forEach(function (item, index) {
+            $(".tampilan").append(`  <div class="card" >
+
+<div class="col-12" >
+    <div class="row" style="margin-left: 5px;">
+        <div class="bungkus" style="margin-top: 8px; display: flex; justify-content: space-between;">
+            <p style="font-family: 'Barlow Condensed', sans-serif; font-size: 14px; margin: 0; font-weight:400 ; width: 120px">`+ item.name + `</p>
+            <h6
+                style="margin: 0 0 0 20%; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  text-align: right; font-weight: bold; ">Rp. `+ item.price +`</h6>
+
+            <div class="col-2">
+                <i class='bx bx-trash' style="cursor: pointer; font-size: 60px;" onclick="Hapus(`+ index + `)"></i>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="bungkus1" style="display: flex; margin-top: -7%; margin-left: 8px;">
+
+            <p style="font-size: 14px;">Unit Price :</p>
+            <h6 style="margin-left: 15px; font-size: 16px;">Rp. `+ item.price + `</h6>
+
+            <p style="margin-left: 15px; font-size: 14px;">Quantity :</p>
+            <h6 style="margin-left: 10%;">`+ item.count + `</h6>
+        </div>
+    </div>
+</div>
+</div>`);
+        })
+        console.log(cart)
+        var tot = 0;
+        var pjkpersentase = 0.1;
+        var totalpajak = 0;
+        for(var i = 0; i < cart.length; i++) {
+            tot = tot + (cart[i].count * cart[i].price)
+        }
+        var Pajak = tot * pjkpersentase;
+        totalpajak += Pajak;
+        var total = Pajak + tot;
+
+        $("#pajak").text("Rp. " + Pajak)
+        $("#total").text("Rp. " + total)
+    }
+    function Hapus(index) {
+        let text;
+        if (confirm (cart.splice(index, 1) && "Apakah Anda Yakin Ingin Menghapus Pesanan?")) {
+            showCartList();
+        } 
+
+    }
+ 
+
+</script>
+
+
+</html>
